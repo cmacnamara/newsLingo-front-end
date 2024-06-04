@@ -31,6 +31,7 @@ const ArticleList = (props) => {
 
   return (
     <>
+    
       {categories.map((category, idx) => (
         <ArticleCategory 
           key={idx} 
