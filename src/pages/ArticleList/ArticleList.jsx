@@ -1,5 +1,9 @@
 // components
 import ArticleCategory from "../../components/ArticleCategory/ArticleCategory"
+import Banner from "../../components/Banner/Banner"
+
+// css
+import styles from "./ArticleList.module.css";
 
 const ArticleList = (props) => {
   let articlesWithImages = props.articles.filter(article => (
@@ -30,16 +34,17 @@ const ArticleList = (props) => {
   if(!props.articles) return <h1>LOADING...</h1>
 
   return (
-    <>
+    <main className={styles.container}>
+      <Banner />
       {categories.map((category, idx) => (
-        <ArticleCategory 
-          key={idx} 
+        <ArticleCategory
+          key={idx}
           category={category}
           articles={categorizedArticles[category]}
         />
       ))}
-    </>
-  )
+    </main>
+  );
 }
 
 export default ArticleList
