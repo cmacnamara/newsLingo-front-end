@@ -1,0 +1,13 @@
+.banner {
+  background-color: var(--banner-color);
+  height: 50px;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: var(--border-radius);
+  color: black;
+  font-weight: 600;
+  margin-top: 20px;
+}
