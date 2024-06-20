@@ -35,7 +35,7 @@ const WordCard = ({word, handleDeleteWord}) => {
     <div className={styles.wordContainer}  id={ flipCard ? styles.flip : "" } onClick={handleWordCardClick}>
       <button onClick={()=>{handleDeleteWord(word._id)
         setFlipCard(false) }}>
-        <Icon category={'Trash'} />
+        <Icon category={'Close'} />
       </button>
       {showDefinition ? 
         <>
@@ -50,7 +50,7 @@ const WordCard = ({word, handleDeleteWord}) => {
         <h1>{word.word}</h1>
       }
 
-      <Icon category={'Flip'} />
+      <Icon category={'Show'} />
     </div>
   )
 }
