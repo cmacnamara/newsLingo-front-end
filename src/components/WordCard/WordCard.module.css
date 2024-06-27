@@ -6,8 +6,8 @@
   -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
   position: relative;
   inline-size: 290px;
-  min-width: 260px;
-  min-height: 260px;
+  min-width: 400px;
+  min-height: 250px;
   text-align: center;
   flex-direction: column;
   flex: none;
@@ -65,7 +65,8 @@
 }
 
 #flip {
-  animation: 0.5s linear flipping; 
+  animation: 0.5s linear flipping;
+
 }
 
 @keyframes flipping {

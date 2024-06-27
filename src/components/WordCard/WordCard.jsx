@@ -32,27 +32,36 @@ const WordCard = ({word, handleDeleteWord}) => {
   })
 
   return (
-    <div className={styles.wordContainer}  id={ flipCard ? styles.flip : "" } onClick={handleWordCardClick}>
-      <button onClick={()=>{handleDeleteWord(word._id)
-        setFlipCard(false) }}>
-        <Icon category={'Close'} />
+    <div
+      className={styles.wordContainer}
+      id={flipCard ? styles.flip : ""}
+      onClick={handleWordCardClick}
+    >
+      <button
+        onClick={() => {
+          handleDeleteWord(word._id);
+          setFlipCard(false);
+        }}
+      >
+        <Icon category={"Close"} />
       </button>
-      {showDefinition ? 
+      {showDefinition ? (
         <>
-          {wordObj.map((wordEl) => 
+          {wordObj.map((wordEl) => (
             <>
-              <h3>{wordEl.translation}</h3>
-              <h4>({wordEl.partOfSpeech})</h4>
+              <h3>
+                {wordEl.translation} ({wordEl.partOfSpeech})
+              </h3>
             </>
-          )}
-        </>   
-        : 
+          ))}
+        </>
+      ) : (
         <h1>{word.word}</h1>
-      }
+      )}
 
-      <Icon category={'Show'} />
+      <Icon category={"Show"} />
     </div>
-  )
+  );
 }
 
 export default WordCard
